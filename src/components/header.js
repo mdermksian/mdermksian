@@ -1,3 +1,28 @@
-import React from "react"
+import React from "react";
+import {css} from "react-emotion";
+import {Link} from "gatsby";
 
-export default props => <h1>{props.headerText}</h1>
+const styles = {
+	container: css`
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		justify-content:center;
+		font-family: 'Raleway', sans-serif;
+	`,
+	item: css`
+		margin:0px;
+		padding:10px;
+	`
+
+}
+
+export default () => (
+	<div className={styles.container}>
+		<Link to={'/'} className={styles.item}>Home</Link>
+		<Link to={'/work'} className={styles.item}>Work</Link>
+		<Link to={'/projects'} className={styles.item}>Projects</Link>
+		<Link to={'/hobbies'} className={styles.item}>Hobbies</Link>
+		<Link to={'/contact'} className={styles.item}>Contact</Link>
+	</div>
+)

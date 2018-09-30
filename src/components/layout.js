@@ -1,11 +1,13 @@
 import React from "react"
+import Header from "./header"
+import Footer from "./footer"
 import { css } from "react-emotion"
 import { StaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
 export default ({ children }) => (
-  <StaticQuery
+  /*<StaticQuery
     query={graphql`
       query{
         site{
@@ -46,5 +48,17 @@ export default ({ children }) => (
         {children}
       </div>
     )}
-  />
+  />*/
+  <div
+    className={css`
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: ${rhythm(2)};
+      padding-top: ${rhythm(1.5)};
+    `}
+  >
+    <Header/>
+    {children}
+    <Footer/>
+  </div>
 )
