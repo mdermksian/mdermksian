@@ -2,7 +2,7 @@ import React from "react"
 import Header from "./header"
 import Footer from "./footer"
 import { css } from "react-emotion"
-import { StaticQuery, Link, graphql } from "gatsby"
+//import { StaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 

@@ -2,7 +2,7 @@ import React from "react";
 import {css} from "react-emotion";
 import linkedinIcon from "../images/linkedin.svg";
 import emailIcon from "../images/email.svg"
-import {Link, graphql, navigate} from "gatsby";
+import {navigate} from "gatsby";
 
 const styles = {
 	container: css`

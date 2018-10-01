@@ -37,11 +37,11 @@ export default () => {
 			<div className={styles.container}>
 				
 				<div className={styles.hsWrapper}>
-					<img src={headshot} className={styles.headshot}/>
+					<img src={headshot} className={styles.headshot} alt=''/>
 				</div>
 				<div className={styles.aboutMe}>
 					<h1 className={styles.title}>Michael Dermksian</h1>
-					<p>I'm a trained mechanical and biomedical engineer who's fascinated with medical devices, robotics, and 
+					<p>I'm a mechanical and biomedical engineer who's fascinated with medical devices, robotics, and 
 					any technology that synthesizes the two. I'm always in pursuit of unsolved problems, impactful solutions, 
 					and a team of driven people to help bridge the gap.
 					</p>
