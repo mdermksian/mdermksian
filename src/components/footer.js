@@ -2,7 +2,6 @@ import React from "react";
 import {css} from "react-emotion";
 import linkedinIcon from "../images/linkedin.svg";
 import emailIcon from "../images/email.svg"
-import {navigate} from "gatsby";
 
 const styles = {
 	container: css`
@@ -30,7 +29,7 @@ const styles = {
 
 export default () => (
 	<div className={styles.container}>
-		<div onClick={() => navigate('https://www.linkedin.com/in/michael-dermksian/')} className={styles.linkedin}></div>
-		<div onClick={() => navigate('mailto:mdermksian@gmail.com')} className={styles.email}></div>
+		<a href='https://www.linkedin.com/in/michael-dermksian/' className={styles.linkedin} target = "_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html:'' }} />
+		<a href='mailto:mdermksian@gmail.com' className={styles.email} dangerouslySetInnerHTML={{ __html:'' }} />
 	</div>
 )

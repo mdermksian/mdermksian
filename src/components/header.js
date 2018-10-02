@@ -13,6 +13,7 @@ const styles = {
 	item: css`
 		margin:0px;
 		padding:10px;
+		transition: color 0.5s ease-in-out;
 	`
 
 }

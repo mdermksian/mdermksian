@@ -6,6 +6,15 @@ import { css } from "react-emotion"
 
 import { rhythm } from "../utils/typography"
 
+const styles = {
+  container: css`
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: ${rhythm(2)};
+    padding-top: ${rhythm(1.5)};
+  `
+}
+
 export default ({ children }) => (
   /*<StaticQuery
     query={graphql`
@@ -49,14 +58,7 @@ export default ({ children }) => (
       </div>
     )}
   />*/
-  <div
-    className={css`
-      margin: 0 auto;
-      max-width: 1200px;
-      padding: ${rhythm(2)};
-      padding-top: ${rhythm(1.5)};
-    `}
-  >
+  <div className={styles.container}>
     <Header/>
     {children}
     <Footer/>

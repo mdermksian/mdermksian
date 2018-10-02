@@ -31,8 +31,7 @@ export default ({data}) => (
 			<div className={styles.tileContainer}>	
 				{data.allMarkdownRemark.edges.map(({node}) => {
 					console.log(node);
-					return (<Tile title={node.frontmatter.title} excerpt={node.excerpt}/>)
-					
+					return (<Tile title={node.frontmatter.title} excerpt={node.excerpt} to={node.fields.slug}/>)
 				})}
 			</div>
 		</div>

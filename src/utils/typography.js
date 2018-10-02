@@ -25,7 +25,7 @@ const typography = new Typography({
 			textDecoration: 'none',
 		},
 		'a:hover,a:active': {
-			color: '#e32',
+			color: '#888',
 		},
 		blockquote: {
  			...scale(1 / 5),

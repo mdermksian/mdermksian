@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "gatsby"; 
 import {css} from "react-emotion";
 
 const styles = {
@@ -8,15 +9,16 @@ const styles = {
 		width: 250px;
 		height: 250px;
 		margin: 10px;
-		background-color: red;
+		background-color: black;
 		text-align: center;
 		color: white;
+		transition: color 0.5s ease-in-out;
 	`
 };
 
 export default (props) => (
-	<div className={styles.container}>
+	<Link to={props.to} className={styles.container}>
 		<h5>{props.title}</h5>
 		<p>{props.excerpt}</p>
-	</div>
+	</Link>
 )
