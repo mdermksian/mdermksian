@@ -26,8 +26,8 @@ const styles = {
 export default ({data}) => (
 	<Layout>
 		<div className={styles.container}>
-			<h1 className={styles.title}>Work</h1>
-			<p className={styles.tidbit}>These articles describe the places I've worked and the lessons I've learned while working at each job.</p>
+			<h1 className={styles.title}>Hobbies</h1>
+			<p className={styles.tidbit}>These articles describe some of my many hobbies. Outside of engineering I have a lot of other interests!</p>
 			<div className={styles.tileContainer}>	
 				{data.allMarkdownRemark.edges.map(({node}) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
@@ -40,7 +40,7 @@ export default ({data}) => (
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(filter:{frontmatter:{category:{eq:"work"}}}){
+		allMarkdownRemark(filter:{frontmatter:{category:{eq:"hobby"}}}){
 			edges {
 				node {
 					frontmatter{
