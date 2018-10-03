@@ -30,8 +30,8 @@ export default ({data}) => (
 			<p className={styles.tidbit}>These articles describe the places I've worked and the lessons I've learned while working at each job.</p>
 			<div className={styles.tileContainer}>	
 				{data.allMarkdownRemark.edges.map(({node}) => {
-					console.log(node);
-					return (<Tile title={node.frontmatter.title} excerpt={node.excerpt} to={node.fields.slug}/>)
+					const picture = node.frontmatter.picture.childImageSharp.resize.src;
+					return (<Tile title={node.frontmatter.title} excerpt={node.excerpt} to={node.fields.slug} picture={picture}/>)
 				})}
 			</div>
 		</div>
@@ -46,6 +46,13 @@ export const query = graphql`
 					frontmatter {
 						title
 						date(formatString: "DD MMMM, YYYY")
+						picture {
+							childImageSharp{
+								resize(width:250, height:250){
+									src
+								}
+							}
+						}
 					}
 					fields {
 						slug
