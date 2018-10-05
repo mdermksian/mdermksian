@@ -19,7 +19,19 @@ module.exports = {
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
-		`gatsby-transformer-remark`,
+		{
+			resolve: `gatsby-transformer-remark`,
+			options: {
+				plugins:[
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth:550
+						}
+					}
+				]
+			}
+		},
 		`gatsby-plugin-emotion`,
 		{
 			resolve: `gatsby-plugin-typography`,
