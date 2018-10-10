@@ -9,7 +9,7 @@ const styles = {
 		display: flex;
 		flex-wrap: nowrap;
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 50px;
 		justify-content: center;
 	`,
 	linkedin: css`

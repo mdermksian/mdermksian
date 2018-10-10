@@ -24,6 +24,5 @@ export default () => (
 		<Link to={'/work'} className={styles.item}>Work</Link>
 		<Link to={'/projects'} className={styles.item}>Projects</Link>
 		<Link to={'/hobbies'} className={styles.item}>Hobbies</Link>
-		<Link to={'/contact'} className={styles.item}>Contact</Link>
 	</div>
 )

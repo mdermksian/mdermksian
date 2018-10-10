@@ -31,7 +31,15 @@ export default ({data}) => (
 			<div className={styles.tileContainer}>	
 				{data.allMarkdownRemark.edges.map(({node}) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
-					return (<Tile title={node.frontmatter.title} excerpt={node.excerpt} to={node.fields.slug} picture={picture}/>)
+					return (
+						<Tile
+							key={node.id}
+							title={node.frontmatter.title}
+							excerpt={node.frontmatter.blurb}
+							to={node.fields.slug}
+							picture={picture}
+						/>
+					)
 				})}
 			</div>
 		</div>
@@ -40,12 +48,14 @@ export default ({data}) => (
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(filter:{frontmatter:{category:{eq:"work"}}}){
+		allMarkdownRemark(sort:{fields:[frontmatter___date], order:DESC}, filter:{frontmatter:{category:{eq:"work"}}}){
 			edges {
 				node {
-					frontmatter{
+					id
+					frontmatter {
 						title
 						date(formatString: "DD MMMM, YYYY")
+						blurb
 						picture {
 							childImageSharp{
 								resize(width:250, height:250){
@@ -57,7 +67,6 @@ export const query = graphql`
 					fields {
 						slug
 					}
-					excerpt
 				}
 			}
 		}
