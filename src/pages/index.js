@@ -8,6 +8,7 @@ const styles = {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
+		justify-content: space-around;
 		margin-top:15px;
 	`,
 	title:css`
