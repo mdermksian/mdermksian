@@ -1,7 +1,5 @@
 import React from "react";
-//import { Link, graphql } from "gatsby"
 import { css } from "react-emotion";
-//import { rhythm } from "../utils/typography"
 import Layout from "../components/layout";
 import headshot from "../images/headshot.jpg";
 
@@ -16,18 +14,16 @@ const styles = {
 		margin-top:20px;
 		text-align:center;
 	`,
-	hsWrapper:css`
-		width:30%;
-		margin-right: 4%;
-	`,
 	headshot:css`
+		width:30%;
 		display:block;
 		height:auto;
-		border-radius:15px;
+		border-radius:10px;
 		min-width: 230px;
 	`,
 	aboutMe:css`
-		width:66%;
+		width:60%;
+		min-width: 230px;
 	`
 }
 
@@ -35,10 +31,8 @@ export default () => {
 	return(
 		<Layout>
 			<div className={styles.container}>
-				
-				<div className={styles.hsWrapper}>
-					<img src={headshot} className={styles.headshot} alt=''/>
-				</div>
+			
+				<img src={headshot} className={styles.headshot} alt=''/>
 				<div className={styles.aboutMe}>
 					<h1 className={styles.title}>Michael Dermksian</h1>
 					<p>I'm a mechanical and biomedical engineer who's fascinated with medical devices, robotics, and 
@@ -52,70 +46,3 @@ export default () => {
 		</Layout>
 	)
 }
-
-/*export default ({ data }) => {
-  console.log(data)
-  return (
-    <Layout>
-      <div>
-        <h1
-          className={css`
-            display: inline-block;
-            border-bottom: 1px solid;
-          `}
-        >
-          Michael Dermksian
-        </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-	          <Link
-	          	to={node.fields.slug}
-	          	className={css`
-	          		text-decoration:none;
-	          		color:inherit;
-	          	`}
-	          >
-	            <h3
-	              className={css`
-	                margin-bottom: ${rhythm(1 / 4)};
-	              `}
-	            >
-	              {node.frontmatter.title}{" "}
-	              <span
-	                className={css`
-	                  color: #bbb;
-	                `}
-	              >
-	                — {node.frontmatter.date}
-	              </span>
-	            </h3>
-	            <p>{node.excerpt}</p>
-	          </Link>
-          </div>
-        ))}
-      </div>
-    </Layout>
-  )
-}
-
-export const query = graphql`
-  query {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          fields {
-          	slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`*/
