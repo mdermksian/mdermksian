@@ -12,7 +12,7 @@ module.exports = {
 				background_color: "#FFFFFF",
 				theme_color: "#FFFFFF",
 				display: "minimal-ui",
-				icon: "src/images/headshot.jpg"
+				icon: "src/images/skiing-square.jpg"
 			}
 		},
 		`gatsby-plugin-react-helmet`,
