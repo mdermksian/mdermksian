@@ -4,6 +4,19 @@ module.exports = {
 	},
 	plugins: [
 		{
+			resolve:`gatsby-plugin-manifest`,
+			options: {
+				name:"Michael Dermksian",
+				short_name: "mdermksian",
+				start_url: "/",
+				background_color: "#FFFFFF",
+				theme_color: "#FFFFFF",
+				display: "minimal-ui",
+				icon: "src/images/headshot.jpg"
+			}
+		},
+		`gatsby-plugin-react-helmet`,
+		{
 			resolve:`gatsby-source-filesystem`,
 			options:{
 				name:`src`,
@@ -39,5 +52,6 @@ module.exports = {
 				pathToConfigModule: `src/utils/typography`,
 			},
 		},
+		`gatsby-plugin-offline`
 	],
 }
