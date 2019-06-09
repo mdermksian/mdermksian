@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title:`Pandas Eating Lots`
+		title:`Michael Dermksian`
 	},
 	plugins: [
 		{
@@ -31,7 +31,14 @@ module.exports = {
 			}
 		},
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
+		{
+			resolve: `gatsby-plugin-sharp`,
+			options: {
+				useMozJpeg: false,
+				stripMetadata: true,
+				defaultQuality: 75,
+			},
+		},
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
