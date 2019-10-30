@@ -20,4 +20,4 @@ One of my major roles as a manufacturing engineer was to manage the machine shop
 ###What I Learned
 The time I spent as a manufacturing engineer at JHI was extremely transformative. I learned about medical device manufacturing under ISO 13485:2016 and FDA's CFR Title 21 Part 820. I developed a working vocabulary for manufacturing  and became very well versed in machining. I was able to develop managerial skills, project management skills, and a persistent sense of continuous improvement. I learned to gauge the value of engineering work both from the perspective of the business and from the perspective of the end user.
 
-Working as a manufacturing engineer also helped me realize a more specific interest within the medical devices industry. As much as I enjoyed my time as a manufacturing engineer, I realized that my true interests lied in design and development.
+Working as a manufacturing engineer also helped me realize a more specific interest within the medical devices industry. As much as I enjoyed my time as a manufacturing engineer, I realized that my true interests lie in design and development.

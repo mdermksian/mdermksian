@@ -27,7 +27,7 @@ export default ({data}) => (
 	<Layout>
 		<div className={styles.container}>
 			<h1 className={styles.title}>Work</h1>
-			<p className={styles.tidbit}>These articles describe the places I've worked and the lessons I've learned while working at each job.</p>
+			<p className={styles.tidbit}>These are the places I've worked and the lessons I've learned in each position.</p>
 			<div className={styles.tileContainer}>	
 				{data.allMarkdownRemark.edges.map(({node}) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
