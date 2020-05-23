@@ -21,7 +21,7 @@ const styles = {
 export default () => (
 	<div className={styles.container}>
 		<Link to={'/'} className={styles.item}>Home</Link>
-		<Link to={'/work'} className={styles.item}>Work</Link>
+		<Link to={'/experience'} className={styles.item}>Experience</Link>
 		<Link to={'/projects'} className={styles.item}>Projects</Link>
 		<Link to={'/hobbies'} className={styles.item}>Hobbies</Link>
 	</div>

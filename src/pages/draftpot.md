@@ -2,7 +2,7 @@
 title: "Draftpot"
 date: "2015-07-01"
 blurb: "Summer 2015"
-category: "work"
+category: "experience"
 picture: "../images/draftpot-logo.jpg"
 ---
 

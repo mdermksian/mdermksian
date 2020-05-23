@@ -2,7 +2,7 @@
 title: "Boom Fantasy Software Development"
 date: "2019-12-01"
 blurb: "November 2018 - July 2019"
-category: "work"
+category: "experience"
 picture: "../images/boom-logo.jpeg"
 ---
 
