@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import { css } from "react-emotion"
+import { css } from "@emotion/core"
 import { Helmet } from "react-helmet"
 
 import { rhythm } from "../utils/typography"
@@ -16,11 +16,11 @@ const styles = {
 }
 
 export default ({ children }) => (
-  <div className={styles.container}>
+  <div css={styles.container}>
     <Helmet>
       <meta charSet="utf-8"/>
       <title>Michael Dermksian</title>
-      <link rel="canonical" href="http://michaeldermksian.com" />
+      <link rel="canonical" href="https://michaeldermksian.com" />
     </Helmet>
     <Header/>
     {children}

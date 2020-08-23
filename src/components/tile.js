@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "gatsby"; 
-import {css} from "react-emotion";
+import {css} from "@emotion/core";
 
 export default (props) => {
 	const styles = {
@@ -36,9 +36,9 @@ export default (props) => {
 	};
 
 	return (
-		<Link to={props.to} className={styles.container}>
-			<div className={styles.shroud}></div>
-			<div className={styles.textContainer}>
+		<Link to={props.to} css={styles.container}>
+			<div css={styles.shroud}></div>
+			<div css={styles.textContainer}>
 				<h4>{props.title}</h4>
 				<p>{props.excerpt}</p>
 			</div>

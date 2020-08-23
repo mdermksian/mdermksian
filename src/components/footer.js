@@ -1,5 +1,5 @@
 import React from "react";
-import {css} from "react-emotion";
+import {css} from "@emotion/core";
 import linkedinIcon from "../images/linkedin.svg";
 import emailIcon from "../images/email.svg"
 
@@ -28,8 +28,8 @@ const styles = {
 }
 
 export default () => (
-	<div className={styles.container}>
-		<a href='https://www.linkedin.com/in/michael-dermksian/' className={styles.linkedin} target = "_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html:'' }} />
-		<a href='mailto:mdermksian@gmail.com' className={styles.email} dangerouslySetInnerHTML={{ __html:'' }} />
+	<div css={styles.container}>
+		<a href='https://www.linkedin.com/in/michael-dermksian/' css={styles.linkedin} target = "_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html:'' }} />
+		<a href='mailto:mdermksian@gmail.com' css={styles.email} dangerouslySetInnerHTML={{ __html:'' }} />
 	</div>
 )
