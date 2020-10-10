@@ -15,8 +15,8 @@ After several years of working, I decided to return to school to obtain a Master
 - 16-868: Biomechanics & Motor Control
 - 24-780: Engineering Computation (C++ Programming)
 - 24-773: Multivariable Linear Control (Robust Control)
-- 24-775: Robot Design & Experimentation
-- 24-785: Engineering Optimization
+- 24-775: Robot Design & Experimentation (<a href="/monkey" style="color:blue;">see project here</a>)
+- 24-785: Engineering Optimization (<a href="/trajectory-opt" style="color:blue;">see project here</a>)
 - 24-774: Advanced Control Systems Integration
 - 24-776: Nonlinear Control
 - 24-787: Machine Learning & Artificial Intelligence for Engineers
