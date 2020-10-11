@@ -12,7 +12,7 @@ After several years of working, I decided to return to school to obtain a Master
 ### Selected Course Work:
 - 24-677: Linear Control Systems
 - 24-760: Robot Dynamics & Analysis
-- 16-868: Biomechanics & Motor Control
+- 16-868: Biomechanics & Motor Control (<a href="/biomechanics-walker" style="color:blue;">see project here</a>)
 - 24-780: Engineering Computation (C++ Programming)
 - 24-773: Multivariable Linear Control (Robust Control)
 - 24-775: Robot Design & Experimentation (<a href="/monkey" style="color:blue;">see project here</a>)
