@@ -1,5 +1,5 @@
 import React from "react";
-import {css} from "react-emotion";
+import {css} from "@emotion/core";
 import {graphql} from "gatsby";
 import Layout from "../components/layout";
 import Tile from "../components/tile";
@@ -25,10 +25,10 @@ const styles = {
 
 export default ({data}) => (
 	<Layout>
-		<div className={styles.container}>
-			<h1 className={styles.title}>Work</h1>
-			<p className={styles.tidbit}>These are the places I've worked and the lessons I've learned in each position.</p>
-			<div className={styles.tileContainer}>	
+		<div css={styles.container}>
+			<h1 css={styles.title}>Work &amp; Education</h1>
+			<p css={styles.tidbit}>Here are all my work and schooling experiences, and the lessons I've learned from each</p>
+			<div css={styles.tileContainer}>	
 				{data.allMarkdownRemark.edges.map(({node}) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
 					return (
@@ -48,7 +48,7 @@ export default ({data}) => (
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(sort:{fields:[frontmatter___date], order:DESC}, filter:{frontmatter:{category:{eq:"work"}}}){
+		allMarkdownRemark(sort:{fields:[frontmatter___date], order:DESC}, filter:{frontmatter:{category:{eq:"experience"}}}){
 			edges {
 				node {
 					id

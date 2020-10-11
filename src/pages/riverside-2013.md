@@ -2,7 +2,7 @@
 title: "Riverside Orthopaedic and Sports Medicine, 2013"
 date: "2013-07-01"
 blurb: "Summer 2013"
-category: "work"
+category: "experience"
 picture: "../images/riverside-logo.jpg"
 ---
 

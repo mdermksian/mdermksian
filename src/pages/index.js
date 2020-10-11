@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "react-emotion";
+import { css } from "@emotion/core";
 import Layout from "../components/layout";
 import headshot from "../images/headshot.jpg";
 
@@ -31,11 +31,11 @@ const styles = {
 export default () => {
 	return(
 		<Layout>
-			<div className={styles.container}>
+			<div css={styles.container}>
 			
-				<img src={headshot} className={styles.headshot} alt=''/>
-				<div className={styles.aboutMe}>
-					<h1 className={styles.title}>Michael Dermksian</h1>
+				<img src={headshot} css={styles.headshot} alt=''/>
+				<div css={styles.aboutMe}>
+					<h1 css={styles.title}>Michael Dermksian</h1>
 					<p>I'm a mechanical and biomedical engineer who's fascinated with medical devices, robotics, and 
 					any technology that synthesizes the two. I'm always in pursuit of unsolved problems, impactful solutions, 
 					and a team of driven people to help bridge the gap.

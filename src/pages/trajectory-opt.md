@@ -1,0 +1,13 @@
+---
+title: "Trajectory Optimization"
+date: "2020-04-01"
+blurb: "Direct Collocation Optimization for Robot Arm"
+category: "project"
+picture: "../images/optimization.png"
+---
+
+For 24-785 Engineering Optimization, a rigorous investigation of optimal trajectory generation was performed on a simple two-dimensional robot arm. The main investigation of this project was to determine the physical consequences of varying two terms of a multi-objective function. The objective function seeked to tradeoff task speed (time taken) and energy expenditure. The problem was constrained to follow the Lagrangian dyanamics of the physical model (equality constraints) and stay within the position, velocity, and force limits of the robot (inequality constraints).
+
+A pareto frontier for the optimization problem was created and the physical implications of the multi-objective function were examined. A full PDF writeup of our results and methods <a href="/optimization-report.pdf" style="color:blue;">can be found here</a>.
+
+![Robot Arm](../images/optimization.png "Robot Arm")

@@ -1,0 +1,18 @@
+---
+title: "Monkey Robot"
+date: "2020-05-01"
+blurb: "Brachiating Monkey Robot"
+category: "project"
+picture: "../images/monkey-prototype.png"
+---
+
+### Project Description
+For 24-775 Robot Design and Experimentation at Carnegie Mellon University, the goal of the course was to develop a bio-inspired robot to answer a particular research question. Over the course of the semester, my team of five designed and prototyped a monkey-inspired brachiating robot capable of swinging across monkey bars. Our specific research question was to extend prior work by adding an elbow joint to each arm in an effor to investigate the robot's capability to swing upwards, increasing its potential energy.
+
+The robot was modeled as a chain of 5 rigid body links connected by four actuators. A rigorous dynamic model of the system was created and then utilized to generate optimal trajectories for the robot. These trajectories were then tracked on the robot using PID controllers for each motor. The robot was capable of single successful swings, which can be seen in the video below. A full PDF writeup of our methods and results <a href="/monkey-report.pdf" style="color:blue;">can be found here</a>.
+
+This project was an outstanding exercise in multi-link robot design and control. It involved CAD modeling, physical prototyping, dynamic modeling, optimal trajectory generation, embedded system programming, and usage of fundamental control princples. Our somewhat rudimentary design shows quite a lot of promise, and with more advanced techniques we believe the robot could be capable of even more sophisticated motion.
+
+### Video
+<iframe style="display: block; margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/pT8WLgFN8Ys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

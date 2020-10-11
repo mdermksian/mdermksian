@@ -1,5 +1,5 @@
 import React from "react";
-import {css} from "react-emotion";
+import {css} from "@emotion/core";
 import {Link} from "gatsby";
 
 const styles = {
@@ -15,14 +15,13 @@ const styles = {
 		padding:10px;
 		transition: color 0.5s ease-in-out;
 	`
-
 }
 
 export default () => (
-	<div className={styles.container}>
-		<Link to={'/'} className={styles.item}>Home</Link>
-		<Link to={'/work'} className={styles.item}>Work</Link>
-		<Link to={'/projects'} className={styles.item}>Projects</Link>
-		<Link to={'/hobbies'} className={styles.item}>Hobbies</Link>
+	<div css={styles.container}>
+		<Link to={'/'} css={styles.item}>Home</Link>
+		<Link to={'/experience'} css={styles.item}>Experience</Link>
+		<Link to={'/projects'} css={styles.item}>Projects</Link>
+		<Link to={'/hobbies'} css={styles.item}>Hobbies</Link>
 	</div>
 )
