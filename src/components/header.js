@@ -1,8 +1,6 @@
 import React from "react";
 import {css} from "@emotion/core";
 import {Link} from "gatsby";
-import delIcon from "../images/icons8-delete.svg";
-import menuIcon from "../images/icons8-menu.svg";
 
 const styles = {
 	container: css`
@@ -16,14 +14,6 @@ const styles = {
 		margin:0px;
 		padding:10px;
 		transition: color 0.5s ease-in-out;
-	`,
-	test: css`
-		height:40px;
-		width:40px;
-		background-image: url(${delIcon});
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
 	`
 }
 
