@@ -36,8 +36,8 @@ export default () => {
 				<img src={headshot} css={styles.headshot} alt=''/>
 				<div css={styles.aboutMe}>
 					<h1 css={styles.title}>Michael Dermksian</h1>
-					<p>I'm a mechanical and biomedical engineer who's fascinated with medical devices, robotics, and 
-					any technology that synthesizes the two. I'm always in pursuit of unsolved problems, impactful solutions, 
+					<p>I'm a mechanical and biomedical engineer who's fascinated with robotics. I have historically worked in the medical device field
+					and have studied robotics and control systems. I'm always in pursuit of unsolved problems, impactful solutions, 
 					and a team of driven people to help bridge the gap.
 					</p>
 					<p>Come take a look at the things I've done and get a sense for who I am. Shoot me an email, connect with me
