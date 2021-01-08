@@ -17,6 +17,6 @@ After several years of working, I decided to return to school to obtain a Master
 - 24-773: Multivariable Linear Control (Robust Control)
 - 24-775: Robot Design & Experimentation (<a href="/monkey" style="color:blue;">see project here</a>)
 - 24-785: Engineering Optimization (<a href="/trajectory-opt" style="color:blue;">see project here</a>)
-- 24-774: Advanced Control Systems Integration
-- 24-776: Nonlinear Control
-- 24-787: Machine Learning & Artificial Intelligence for Engineers
+- 24-774: Advanced Control Systems Integration (<a href="/adaptive-balancing" style="color:blue;">see project here</a>)
+- 24-776: Nonlinear Control (<a href="/nonlinear-quadcopter" style="color:blue;">see project here</a>)
+- 24-787: Machine Learning & Artificial Intelligence (<a href="/dr-detection" style="color:blue;">see project here</a>)
