@@ -1,0 +1,13 @@
+---
+title: "Diabetic Retinopathy DNN"
+date: "2020-12-19"
+blurb: "Diabetic retinopathy diagnosis with a convolutional neural network (CNN)"
+category: "project"
+picture: "../images/dr-square.png"
+---
+
+As a final project for 24-787 Machine Learning and Artificial Intelligence, my group and I investigated the capability for convolutional neural networks (CNN) to diagnose varying levels of diabetic retinopathy. Diabetic retinopathy (DR) is a complication that arises for diabetic individuals where the blood vessels in the retina become damaged over time. In early stages, this disease has only a minor impact on vision, but in the long term it can lead to blindness. As such, it is critical that patients have this disease diagnosed early.
+
+We used various CNN architectures to attempt to classify fundus images (images of the retina) on a scale of 0 (no DR) to 4 (proliferative DR). We investigated the capability of network architectures such as AlexNET, VGG, and ResNET. We found that each of these architecutures was capable of classifying images as either 0 or 1-4, but had difficulty differentiating between levels 1, 2, 3, and 4. This is the most important step of the diagnosis, as early detection is critical. We also investigated the effects of image pre-processing on the image. We applied both a Gaussian filter and a contrast limited adaptive histogram equalization to the images, which appeared to improve the classification accuracy.
+
+When the problem was reduced to only two classes 0 (unafflicted) and 1-4 (afflicted), we were capable of achieving an accuracy of 98% with VGG16 and Gaussian filtered images. This came with a 98.1% precision and 99% recall. A full write-up of the results and methods <a href="/diabetic-retinopathy-report.pdf" style="color:blue;">can be found here</a>
