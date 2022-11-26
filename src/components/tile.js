@@ -1,8 +1,8 @@
 import React from "react";
-import {Link} from "gatsby"; 
-import {css} from "@emotion/core";
+import {Link} from "gatsby";
+import {css} from "@emotion/react";
 
-export default (props) => {
+const Tile = (props) => {
 	const styles = {
 		container:css`
 			position:relative;
@@ -47,3 +47,4 @@ export default (props) => {
 
 }
 
+export default Tile;

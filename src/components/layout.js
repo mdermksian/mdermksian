@@ -1,8 +1,7 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import { css } from "@emotion/core"
-import { Helmet } from "react-helmet"
+import { css } from "@emotion/react"
 
 import { rhythm } from "../utils/typography"
 
@@ -15,15 +14,19 @@ const styles = {
   `
 }
 
-export default ({ children }) => (
+export const Head = () => {
+  <>
+    <meta charSet="utf-8"/>
+    <title>Michael Dermksian</title>
+    <link rel="canonical" href="https://michaeldermksian.com" />
+  </>
+}
+
+const Layout = ({ children }) => (
   <div css={styles.container}>
-    <Helmet>
-      <meta charSet="utf-8"/>
-      <title>Michael Dermksian</title>
-      <link rel="canonical" href="https://michaeldermksian.com" />
-    </Helmet>
     <Header/>
     {children}
     <Footer/>
   </div>
 )
+export default Layout;

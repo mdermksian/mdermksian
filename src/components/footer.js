@@ -1,5 +1,5 @@
 import React from "react";
-import {css} from "@emotion/core";
+import {css} from "@emotion/react";
 import linkedinIcon from "../images/linkedin.svg";
 import emailIcon from "../images/email.svg"
 
@@ -27,9 +27,11 @@ const styles = {
 	`
 }
 
-export default () => (
+const Footer = () => (
 	<div css={styles.container}>
-		<a href='https://www.linkedin.com/in/michael-dermksian/' css={styles.linkedin} target = "_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html:'' }} />
-		<a href='mailto:mdermksian@gmail.com' css={styles.email} dangerouslySetInnerHTML={{ __html:'' }} />
+		<a href='https://www.linkedin.com/in/michael-dermksian/' css={styles.linkedin} target = "_blank" rel="noopener noreferrer" dangerouslySetInnerHTML={{ __html:'' }} aria-label="LinkedIn button"/>
+		<a href='mailto:mdermksian@gmail.com' css={styles.email} dangerouslySetInnerHTML={{ __html:'' }} aria-label="Email button"/>
 	</div>
 )
+
+export default Footer;
