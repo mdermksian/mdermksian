@@ -15,7 +15,6 @@ module.exports = {
 				icon: "src/images/skiing-square.jpg"
 			}
 		},
-		`gatsby-plugin-react-helmet`,
 		{
 			resolve:`gatsby-source-filesystem`,
 			options:{
@@ -27,7 +26,7 @@ module.exports = {
 			resolve:`gatsby-source-filesystem`,
 			options:{
 				name:`images`,
-				path: `${__dirname}/src/images`, 
+				path: `${__dirname}/src/images`,
 			}
 		},
 		`gatsby-transformer-sharp`,

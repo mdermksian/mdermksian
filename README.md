@@ -5,6 +5,7 @@ This portfolio is a static react website built with the power of gatsby.js. All 
 ---
 ## Items to be added
 ### Experience:
+ - JnJ Experience
 ### Projects:
 ### Hobbies
 - Latte art

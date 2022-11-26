@@ -1,5 +1,5 @@
 import React from "react";
-import {css} from "@emotion/core";
+import {css} from "@emotion/react";
 import {Link} from "gatsby";
 
 const styles = {
@@ -17,7 +17,7 @@ const styles = {
 	`
 }
 
-export default () => (
+const Header = () => (
 	<div css={styles.container}>
 		<Link to={'/'} css={styles.item}>Home</Link>
 		<Link to={'/experience'} css={styles.item}>Experience</Link>
@@ -25,3 +25,5 @@ export default () => (
 		<Link to={'/hobbies'} css={styles.item}>Hobbies</Link>
 	</div>
 )
+
+export default Header;

@@ -1,5 +1,5 @@
 import React from "react";
-import {css} from "@emotion/core";
+import {css} from "@emotion/react";
 import {graphql} from "gatsby";
 import Layout from "../components/layout";
 import Tile from "../components/tile";
@@ -23,12 +23,12 @@ const styles = {
 	`
 };
 
-export default ({data}) => (
+const Hobbies = ({data}) => (
 	<Layout>
 		<div css={styles.container}>
 			<h1 css={styles.title}>Hobbies</h1>
 			<p css={styles.tidbit}>These are some of my many hobbies. Outside of engineering I have a lot of other interests!</p>
-			<div css={styles.tileContainer}>	
+			<div css={styles.tileContainer}>
 				{data.allMarkdownRemark.edges.map(({node}) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
 					return(
@@ -46,13 +46,15 @@ export default ({data}) => (
 	</Layout>
 )
 
+export default Hobbies;
+
 export const query = graphql`
 	query {
-		allMarkdownRemark(sort:{fields:[frontmatter___date],order:DESC}, filter:{frontmatter:{category:{eq:"hobby"}}}){
+		allMarkdownRemark(sort:{frontmatter: {date: DESC}}, filter:{frontmatter:{category:{eq:"hobby"}}}){
 			edges {
 				node {
 					id
-					frontmatter{
+					frontmatter {
 						title
 						date(formatString: "DD MMMM, YYYY")
 						blurb
