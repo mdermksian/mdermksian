@@ -1,6 +1,7 @@
 ---
 title: "Kobe"
 date: "2015-01-01"
+slug: "kobe"
 blurb: "I have the best dog in the world. I know everyone says that, but for me it's true."
 category: "hobby"
 picture: "../images/kobe-square.jpg"

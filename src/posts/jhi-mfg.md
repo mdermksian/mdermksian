@@ -1,6 +1,7 @@
 ---
 title: "Jarvik Heart Manufacturing"
 date: "2016-10-04"
+slug: "jhi-mfg"
 blurb: "October 2016 - February 2018"
 category: "experience"
 picture: "../images/jhi_logo_small.jpg"

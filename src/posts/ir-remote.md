@@ -1,6 +1,7 @@
 ---
 title: "IR Remote"
 date: "2018-07-26"
+slug: "ir-remote"
 blurb: "I lost the remote to my TV, so I built my own"
 category: "project"
 picture: "../images/irremote-square.jpg"
@@ -14,12 +15,12 @@ After living in Brooklyn for a year, my roommates moved out and left me with a n
 
 I don't use the TV for watching normal TV, so I had no use for channel control or the majority of the other TV-related functions.
 
-####The Remote Construction
+#### The Remote Construction
 In order to accomplish the above requirements, I decided to use an Arduino Uno and an old IR remote that I had lying around my room. I opened the remote and patched into the IR LED via an Arduino output. The Arduino would listen for inputs from four buttons on a breadboard (ON/OFF, Vol Up, Vol Dn, and Input) and then output the proper encoded message to the LED. The Arduino was programmed via the normal computer IDE and was then powered with a 9V battery. This is a picture of the construction with the Arduino powered over USB:
 
 ![IR Remote](../images/irremote-square.jpg "IR Remote USB powered")
 
-####The NEC Protocol
+#### The NEC Protocol
 The real work in this project was to encode the proper message into the NEC infrared protocol for transmission. A significant amount of digging online uncovered the messages I needed to send, and the form they would take in the NEC protocol. NEC is surprisingly simple. The protocol operates with a 38kHz carrier frequency. A logical "1" is a 2.25ms interval that begins with a 560µs burst of the carrier frequency. A logical "0" is a 1.125ms interval that begins with a 560µs burst of the carrier frequency. A message is comprised of an address and a command - each 8 bits - encoded in 5 parts:
 1. The message always starts with a 9ms burst of the 38kHz carrier frequency followed by a 4.5ms quiet interval.
 2. The 8 bits of the address are transmitted with the least significant bit first.
