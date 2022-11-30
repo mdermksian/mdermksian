@@ -3,6 +3,7 @@ import {css} from "@emotion/react";
 import {graphql} from "gatsby";
 import Layout from "../components/layout";
 import Tile from "../components/tile";
+import Seo from "../components/seo";
 
 const styles = {
 	container: css`
@@ -45,6 +46,8 @@ const Hobbies = ({data}) => (
 		</div>
 	</Layout>
 )
+
+export const Head = () => <Seo title={`Hobbies`} />
 
 export default Hobbies;
 
