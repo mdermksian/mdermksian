@@ -1,6 +1,7 @@
 ---
 title: "Quadcopter Gain Scheduling"
 date: "2020-12-20"
+slug: "nonlinear-quadcopter"
 blurb: "Gain scheduled tracking control of a quadrotor"
 category: "project"
 picture: "../images/quadcopter.png"
@@ -19,4 +20,4 @@ The controller was implemented and simulated using PX4 and jMAVsim. Sensor data 
 
 We found that the best tracking performance can be achieved by fitting continuously smooth functions of the scheduling variable to each element of the gain matrix. The lack of discontinuities of this type of controller prevents oscillations that result from switching regions (as observed in the stepped scheduler).
 
-An in-depth PDF writeup of our results and methods <a href="/quadcopter-report.pdf" style="color:blue;">can be found here</a>. Code for controller implementation can be found on <a href="https://github.com/mdermksian/nonlinear-project" style="color:blue;" target="_blank" rel="noopener noreferrer"> my Github page.</a>
+An in-depth PDF writeup of our results and methods <PostLink href="/quadcopter-report.pdf">can be found here</PostLink>. Code for controller implementation can be found on <PostLink href="https://github.com/mdermksian/nonlinear-project" target="_blank" rel="noopener noreferrer"> my Github page.</PostLink>

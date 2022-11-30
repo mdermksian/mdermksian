@@ -3,6 +3,7 @@ import {css} from "@emotion/react";
 import {graphql} from "gatsby";
 import Layout from "../components/layout";
 import Tile from "../components/tile";
+import Seo from "../components/seo";
 
 const styles = {
 	container: css`
@@ -29,14 +30,14 @@ const Hobbies = ({data}) => (
 			<h1 css={styles.title}>Hobbies</h1>
 			<p css={styles.tidbit}>These are some of my many hobbies. Outside of engineering I have a lot of other interests!</p>
 			<div css={styles.tileContainer}>
-				{data.allMarkdownRemark.edges.map(({node}) => {
+				{data.allMdx.nodes.map((node) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
 					return(
 						<Tile
 							key={node.id}
 							title={node.frontmatter.title}
 							excerpt={node.frontmatter.blurb}
-							to={node.fields.slug}
+							to={`/${node.frontmatter.slug}`}
 							picture={picture}
 						/>
 					)
@@ -46,28 +47,26 @@ const Hobbies = ({data}) => (
 	</Layout>
 )
 
+export const Head = () => <Seo title={`Hobbies`} />
+
 export default Hobbies;
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(sort:{frontmatter: {date: DESC}}, filter:{frontmatter:{category:{eq:"hobby"}}}){
-			edges {
-				node {
-					id
-					frontmatter {
-						title
-						date(formatString: "DD MMMM, YYYY")
-						blurb
-						picture {
-							childImageSharp{
-								resize(width:250, height:250){
-									src
-								}
+		allMdx(sort:{frontmatter: {date: DESC}}, filter:{frontmatter:{category:{eq:"hobby"}}}){
+			nodes {
+				id
+				frontmatter {
+					title
+					slug
+					date(formatString: "DD MMMM, YYYY")
+					blurb
+					picture {
+						childImageSharp {
+							resize(width:250, height:250){
+								src
 							}
 						}
-					}
-					fields {
-						slug
 					}
 				}
 			}

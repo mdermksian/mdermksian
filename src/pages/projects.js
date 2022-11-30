@@ -3,6 +3,7 @@ import {css} from "@emotion/react";
 import {graphql} from "gatsby";
 import Layout from "../components/layout";
 import Tile from "../components/tile";
+import Seo from "../components/seo";
 
 const styles = {
 	container: css`
@@ -29,14 +30,14 @@ const Projects = ({data}) => (
 			<h1 css={styles.title}>Projects</h1>
 			<p css={styles.tidbit}>These are some of the projects I've completed and the lessons I've learned in their completion.</p>
 			<div css={styles.tileContainer}>
-				{data.allMarkdownRemark.edges.map(({node}) => {
+				{data.allMdx.nodes.map((node) => {
 					const picture = node.frontmatter.picture.childImageSharp.resize.src;
 					return (
 						<Tile
 							key={node.id}
 							title={node.frontmatter.title}
 							excerpt={node.frontmatter.blurb}
-							to={node.fields.slug}
+							to={`/${node.frontmatter.slug}`}
 							picture={picture}
 						/>
 					)
@@ -46,28 +47,26 @@ const Projects = ({data}) => (
 	</Layout>
 )
 
+export const Head = () => <Seo title={`Projects`} />
+
 export default Projects;
 
 export const query = graphql`
 	query {
-		allMarkdownRemark(sort:{frontmatter: {date: DESC}}, filter:{frontmatter:{category:{eq:"project"}}}){
-			edges {
-				node {
-					id
-					frontmatter {
-						title
-						date(formatString: "DD MMMM, YYYY")
-						blurb
-						picture {
-							childImageSharp {
-								resize(width:250, height:250){
-									src
-								}
+		allMdx(sort:{frontmatter: {date: DESC}}, filter:{frontmatter:{category:{eq:"project"}}}){
+			nodes {
+				id
+				frontmatter {
+					title
+					slug
+					date(formatString: "DD MMMM, YYYY")
+					blurb
+					picture {
+						childImageSharp {
+							resize(width:250, height:250){
+								src
 							}
 						}
-					}
-					fields {
-						slug
 					}
 				}
 			}

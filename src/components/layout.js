@@ -14,14 +14,6 @@ const styles = {
   `
 }
 
-export const Head = () => {
-  <>
-    <meta charSet="utf-8"/>
-    <title>Michael Dermksian</title>
-    <link rel="canonical" href="https://michaeldermksian.com" />
-  </>
-}
-
 const Layout = ({ children }) => (
   <div css={styles.container}>
     <Header/>

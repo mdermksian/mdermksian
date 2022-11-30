@@ -1,6 +1,7 @@
 ---
 title: "Cheesemaking"
 date: "2016-01-01"
+slug: "cheesemaking"
 blurb: "Cheese is my favorite food, so I decided to try making it"
 category: "hobby"
 picture: "../images/cheesemaking-square.jpg"

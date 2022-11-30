@@ -1,6 +1,7 @@
 ---
 title: "Intuitive Instrument Design Internship"
 date: "2020-05-01"
+slug: "intuitive"
 blurb: "May 2020 - August 2020"
 category: "experience"
 picture: "../images/intuitive-logo.png"

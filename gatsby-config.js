@@ -4,6 +4,29 @@ module.exports = {
 	},
 	plugins: [
 		{
+			resolve: `gatsby-plugin-mdx`,
+			options: {
+				extensions: [`.mdx`, `.md`],
+				gatsbyRemarkPlugins:[
+					{
+						resolve: `gatsby-remark-images`,
+						options: {
+							maxWidth:550,
+							wrapperStyle: `margin-bottom: 1.45rem;`,
+						}
+					}
+				]
+			},
+		},
+		`gatsby-plugin-mdx-embed`,
+		{
+			resolve:`gatsby-source-filesystem`,
+			options: {
+				name: `pages`,
+				path: `${__dirname}/src/posts`,
+			},
+		},
+		{
 			resolve:`gatsby-plugin-manifest`,
 			options: {
 				name:"Michael Dermksian",
@@ -13,13 +36,6 @@ module.exports = {
 				theme_color: "#FFFFFF",
 				display: "minimal-ui",
 				icon: "src/images/skiing-square.jpg"
-			}
-		},
-		{
-			resolve:`gatsby-source-filesystem`,
-			options:{
-				name:`src`,
-				path:`${__dirname}/src/`
 			}
 		},
 		{
@@ -37,19 +53,6 @@ module.exports = {
 				stripMetadata: true,
 				defaultQuality: 75,
 			},
-		},
-		{
-			resolve: `gatsby-transformer-remark`,
-			options: {
-				plugins:[
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							maxWidth:550
-						}
-					}
-				]
-			}
 		},
 		{
 			resolve: `gatsby-plugin-emotion`

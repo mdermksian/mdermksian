@@ -1,6 +1,7 @@
 ---
 title: "Jarvik Heart Research & Development"
 date: "2018-02-01"
+slug: "jhi-rd"
 blurb: "February 2018 - November 2018"
 category: "experience"
 picture: "../images/jhi_logo_small.jpg"
