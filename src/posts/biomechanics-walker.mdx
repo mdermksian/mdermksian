@@ -1,20 +1,25 @@
 ---
-title: "Drop Foot Gait Simulation"
-date: "2019-12-01"
-slug: "biomechanics-walker"
-blurb: "Generating a simulated drop foot gait with evolutionary algorithm"
-category: "project"
-picture: "../images/biomechanics-walker.png"
+title: 'Drop Foot Gait Simulation'
+date: '2019-12-01'
+slug: 'biomechanics-walker'
+blurb: 'Generating a simulated drop foot gait with evolutionary algorithm'
+category: 'project'
+picture: '../images/biomechanics-walker.png'
 ---
 
 ### Project Description
+
 For 16-868 Biomechanics & Motor Control, my team and I investigated simulated gait of a two-legged walker in MATLAB's Simulink. Our goal was to apply a drop foot injury to the model and generate a simulated gait that aligns with how drop foot gait presents in the real world. To this end, we started with a 2D muscular reflex model produced by Geyer and Herr in 2010, and gave it drop foot by reducing the maximum isometric force of its tibialis anterior to 33% of the healthy value. A covariance matrix adaptation evolutionary strategy (CMA-ES) was then employed to find a new set of control parameters that would allow the model to walk continuously.
 
 A full writeup of the methods and results <PostLink href="/biomechanics-report.pdf">can be found here</PostLink>.
 
 #### Gait of the healthy starting model can be seen in the following video:
-<Video src="https://www.youtube.com/embed/jb5guOVHsGM" title="healthy-walker"/>
 
+<Video src='https://www.youtube.com/embed/jb5guOVHsGM' title='healthy-walker' />
 
 #### Gait of our optimized drop-foot model can be seen in the following video:
-<Video src="https://www.youtube.com/embed/Uux9MA3y10k" title="dropfoot-walker" />
+
+<Video
+  src='https://www.youtube.com/embed/Uux9MA3y10k'
+  title='dropfoot-walker'
+/>
