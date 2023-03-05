@@ -1,13 +1,14 @@
 ---
-title: "Adaptive Control of Tumbller"
-date: "2020-12-21"
-slug: "adaptive-balancing"
-blurb: "Adaptive control of an inverted cart-pendulum robot"
-category: "project"
-picture: "../images/tumbller-square.jpg"
+title: 'Adaptive Control of Tumbller'
+date: '2020-12-21'
+slug: 'adaptive-balancing'
+blurb: 'Adaptive control of an inverted cart-pendulum robot'
+category: 'project'
+picture: '../images/tumbller-square.jpg'
 ---
 
 ### Project Description
+
 For 24-774 Advanced Control Systems Integration, my group and I worked to balance an inverted cart-pendulum robot (called "Tumbller") about an unstable equilibrium point in the face of a changing offset mass. We applied two techniques. The first is an indirect adaptive control method called a self-tuning regulator, which used a recursive least squares algorithm to identify the changing system parameters and redesign an LQR controller for the new system. The second is a direct adaptive control method called approximate dynamic programming, which uses a deep neural network to identify changes in the system parameters and provide a pre-designed LQR gain matrix.
 
 The mass of the robot was changed by adding quarters to an offset tray. As mass was added, the system had to not only re-design a controller, but also identify a changing equilibrium point. An algorithm was implemented to identify the changing equilibrium point. The combined function of the self-tuning regulator and the equilibrium point identification algorithm can be seen in the video below.
@@ -17,4 +18,8 @@ A full writeup of the methods and results <PostLink href="/adaptive-tumbller-rep
 We found that the robot, with the self-tuning regulator approach, was capable of staying upright with up to 21 quarters. This was the limit of the holding tray, so it may be able to hold even more. With the approximate dynamic programming approach the system could only balance with 8 quarters. However, with further fine tuning and training of the network, we believe that this approach would be capable of matching the performance of the self-tuning regulator.
 
 ### Video
-<Video src="https://www.youtube.com/embed/mllYhUX52Sk" title="adaptive-tumbller"/>
+
+<Video
+  src='https://www.youtube.com/embed/mllYhUX52Sk'
+  title='adaptive-tumbller'
+/>

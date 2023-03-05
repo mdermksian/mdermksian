@@ -1,9 +1,9 @@
-import React from "react"
-import Header from "./header"
-import Footer from "./footer"
-import { css } from "@emotion/react"
+import React from 'react';
+import Header from './header';
+import Footer from './footer';
+import { css } from '@emotion/react';
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography';
 
 const styles = {
   container: css`
@@ -11,14 +11,14 @@ const styles = {
     max-width: 1200px;
     padding: ${rhythm(2)};
     padding-top: ${rhythm(1.5)};
-  `
-}
+  `,
+};
 
 const Layout = ({ children }) => (
   <div css={styles.container}>
-    <Header/>
+    <Header />
     {children}
-    <Footer/>
+    <Footer />
   </div>
-)
+);
 export default Layout;
