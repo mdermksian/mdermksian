@@ -1,0 +1,55 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const siteTitle = 'Michael Dermksian';
+const analyticsId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>{title} | {siteTitle}</title>
+    {
+      analyticsId && (
+        <>
+          <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${analyticsId}`} />
+          <script is:inline define:vars={{ analyticsId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', analyticsId);
+          </script>
+        </>
+      )
+    }
+  </head>
+  <body>
+    <div class="container">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--rhythm) * 2);
+    padding-top: calc(var(--rhythm) * 1.5);
+  }
+</style>

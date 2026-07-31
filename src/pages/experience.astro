@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../components/Layout.astro';
+import Tile from '../components/Tile.astro';
+
+const allPosts: CollectionEntry<'posts'>[] = await getCollection('posts');
+const posts = allPosts
+  .filter((post: CollectionEntry<'posts'>) => post.data.category === 'experience')
+  .sort(
+    (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) =>
+      b.data.date.getTime() - a.data.date.getTime(),
+  );
+---
+
+<Layout title="Experience">
+  <section class="listing">
+    <h1>Work &amp; Education</h1>
+    <p class="tidbit">
+      Here are all my work and schooling experiences, and the lessons I've
+      learned from each
+    </p>
+    <div class="tile-container">
+      {
+        posts.map((post) => (
+          <Tile
+            title={post.data.title}
+            excerpt={post.data.blurb}
+            href={`/${post.data.slug}`}
+            picture={post.data.picture}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .listing {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1,
+  .tidbit {
+    text-align: center;
+  }
+
+  .tile-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+</style>

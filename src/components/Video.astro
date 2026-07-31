@@ -1,0 +1,27 @@
+---
+interface Props {
+  src: string;
+  title: string;
+}
+
+const { src, title } = Astro.props;
+---
+
+<iframe
+  class="video"
+  width="560"
+  height="315"
+  src={src}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  title={title}
+></iframe>
+
+<style>
+  .video {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 0;
+  }
+</style>

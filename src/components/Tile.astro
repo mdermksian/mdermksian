@@ -1,0 +1,70 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  excerpt: string;
+  href: string;
+  picture: ImageMetadata;
+}
+
+const { title, excerpt, href, picture } = Astro.props;
+---
+
+<a class="tile" href={href}>
+  <Image src={picture} alt="" width={250} height={250} class="tile-image" />
+  <div class="shroud"></div>
+  <div class="text-container">
+    <h4>{title}</h4>
+    <p>{excerpt}</p>
+  </div>
+</a>
+
+<style>
+  .tile {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    overflow: hidden;
+  }
+
+  .tile-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .shroud {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .tile:hover .shroud {
+    background-color: #888;
+  }
+
+  .text-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  h4 {
+    margin-top: 0;
+  }
+</style>

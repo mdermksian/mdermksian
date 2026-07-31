@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../components/Layout.astro';
+import PostLink from '../components/PostLink.astro';
+import Video from '../components/Video.astro';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+export async function getStaticPaths() {
+  const posts: CollectionEntry<'posts'>[] = await getCollection('posts');
+
+  return posts.map((post: CollectionEntry<'posts'>) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+  <article>
+    <h1>{post.data.title}</h1>
+    <Content components={{ PostLink, Video }} />
+  </article>
+</Layout>

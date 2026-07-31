@@ -1,6 +1,6 @@
 # Personal Portfolio for Michael Dermksian
 
-This portfolio is a static react website built with the power of gatsby.js. All webpages are custom styled.
+This portfolio is a static website built with Astro. All webpages are custom styled.
 
 ---
 
@@ -16,4 +16,4 @@ This portfolio is a static react website built with the power of gatsby.js. All 
 
 ### Misc
 
--[ ] Restyle header for phone
+- [ ] Restyle header for phone

@@ -58,5 +58,6 @@ typings/
 .env
 
 .cache/
-public
+.astro/
+dist/
 yarn-error.log
