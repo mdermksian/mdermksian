@@ -3,33 +3,20 @@
   "description": "Personal portfolio for Michael Dermksian",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "develop": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "serve": "ASTRO_TELEMETRY_DISABLED=1 astro preview"
   },
   "dependencies": {
-    "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.10.5",
-    "@mdx-js/react": "^2.1.5",
-    "gatsby": "^5.2.0",
-    "gatsby-plugin-emotion": "^8.2.0",
-    "gatsby-plugin-gtag": "^1.0.13",
-    "gatsby-plugin-image": "^3.2.0",
-    "gatsby-plugin-manifest": "^5.2.0",
-    "gatsby-plugin-mdx": "^5.2.0",
-    "gatsby-plugin-mdx-embed": "^1.1.3",
-    "gatsby-plugin-offline": "^6.2.0",
-    "gatsby-plugin-sharp": "^5.2.0",
-    "gatsby-plugin-typography": "^5.2.0",
-    "gatsby-remark-images": "^7.2.0",
-    "gatsby-source-filesystem": "^5.2.0",
-    "gatsby-transformer-sharp": "^5.2.0",
-    "mdx-embed": "^1.1.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-typography": "^0.16.20",
-    "typography": "^0.16.21",
-    "typography-theme-kirkham": "^0.16.19",
-    "typography-theme-stern-grove": "^0.16.19"
+    "@astrojs/mdx": "^4.3.4",
+    "astro": "^5.13.5",
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.3"
   }
 }

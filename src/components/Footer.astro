@@ -1,0 +1,45 @@
+---
+import linkedinIcon from '../images/linkedin.svg';
+import emailIcon from '../images/email.svg';
+---
+
+<footer class="footer">
+  <a
+    class="icon linkedin"
+    href="https://www.linkedin.com/in/michael-dermksian/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn button"
+  ></a>
+  <a
+    class="icon email"
+    href="mailto:mdermksian@gmail.com"
+    aria-label="Email button"
+  ></a>
+</footer>
+
+<style define:vars={{ linkedinIcon: `url(${linkedinIcon.src})`, emailIcon: `url(${emailIcon.src})` }}>
+  .footer {
+    bottom: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+  }
+
+  .linkedin {
+    margin-right: 20px;
+    background-image: var(--linkedinIcon);
+  }
+
+  .email {
+    background-image: var(--emailIcon);
+  }
+</style>

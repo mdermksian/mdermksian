@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Raleway:wght@500&display=swap');
+
+:root {
+  --color-text: rgba(0, 0, 0, 0.8);
+  --color-muted: #888;
+  --rhythm: 1.45rem;
+}
+
+html {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--color-text);
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: var(--color-muted);
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+table {
+  margin-top: 0;
+  margin-bottom: var(--rhythm);
+}
+
+ul {
+  list-style: disc;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: calc(var(--rhythm) * 2);
+  margin-bottom: var(--rhythm);
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-style: italic;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto var(--rhythm);
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: calc(var(--rhythm) * 0.5) calc(var(--rhythm) * 0.5)
+    calc(var(--rhythm) * 0.5) calc(var(--rhythm) * 0.875);
+  border-left: calc(var(--rhythm) * 0.125) solid #ccc;
+  background: #f7f7f7;
+  color: #4f4f4f;
+  font-size: 1.15rem;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote cite {
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+blockquote cite::before {
+  content: '— ';
+}
+
+@media (max-width: 480px) {
+  ul,
+  ol {
+    margin-left: var(--rhythm);
+  }
+
+  blockquote {
+    margin-left: calc(var(--rhythm) * -0.75);
+    margin-right: calc(var(--rhythm) * -0.75);
+    padding-left: calc(var(--rhythm) * 0.6875);
+    padding-right: calc(var(--rhythm) * 0.75);
+  }
+}
